@@ -9,10 +9,10 @@ This repository contains [Stable Diffusion](https://github.com/CompVis/stable-di
 new checkpoints. The following list provides an overview of all currently available models. More coming soon.
 
 # Installation
-1. Install `torch` and `torchvision` ([source](https://pytorch.org/get-started/locally/#start-locally)):
-* Windows and Linux: `pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu116`
-* Mac: `pip install torch torchvision torchaudio`
-2. Install `stable-diffusion-sdkit`: `pip install stable-diffusion-sdkit`
+1. Run `pip install stable-diffusion-sdkit`
+2. On Windows and Linux only: `pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu116`
+
+Step 2 is not necessary on Mac.
 
 ## News
 
