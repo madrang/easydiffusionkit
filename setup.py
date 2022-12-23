@@ -28,7 +28,7 @@ def install_torch(package: str, version: str):
     return f'{package} @ https://download.pytorch.org/whl/{cuda_version}/{wheel_filename}'
 
 setup(
-    name='ldm',
+    name='stable-diffusion-sdkit',
     version='0.0.1',
     description='',
     packages=find_packages(),
