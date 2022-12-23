@@ -20,7 +20,7 @@ if platform.system() == 'Darwin':
 
 setup(
     name='stable-diffusion-sdkit',
-    version='2.1.0a',
+    version='2.1.0',
     description='',
     packages=find_packages(),
     install_requires=dependencies,
