@@ -18,6 +18,9 @@ dependencies = [
 if platform.system() == 'Darwin':
     dependencies += ['torch', 'torchvision']
 
+# On Windows and Linux, the user needs to install torch and torchvision manually, since the CUDA versions are not hosted on PyPI.
+# They need to run: pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu116
+
 setup(
     name='stable-diffusion-sdkit',
     version='2.1.0',
@@ -25,7 +28,3 @@ setup(
     packages=find_packages(),
     install_requires=dependencies,
 )
-
-if platform.system() in ('Windows', 'Linux'):
-    print("**Important:** You need to install torch and torchvision manually, since the CUDA versions are not hosted on PyPI.")
-    print("Please run: pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu116")
