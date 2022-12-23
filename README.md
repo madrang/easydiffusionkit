@@ -1,3 +1,5 @@
+Wrapper for the official [Stable Diffusion](https://github.com/Stability-AI/stablediffusion) repository, to allow installing via `pip`. Please see the installation section below for more details.
+
 # Stable Diffusion Version 2
 ![t2i](assets/stable-samples/txt2img/768/merged-0006.png)
 ![t2i](assets/stable-samples/txt2img/768/merged-0002.png)
