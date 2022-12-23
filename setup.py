@@ -29,7 +29,7 @@ def install_torch(package: str, version: str):
 
 setup(
     name='stable-diffusion-sdkit',
-    version='0.0.1',
+    version='2.1.0',
     description='',
     packages=find_packages(),
     install_requires=[
