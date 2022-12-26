@@ -9,9 +9,10 @@ from typing import Optional, Any
 from ldm.modules.attention import MemoryEfficientCrossAttention
 
 try:
+    import os
     import xformers
     import xformers.ops
-    XFORMERS_IS_AVAILBLE = True
+    XFORMERS_IS_AVAILBLE = os.environ.get("ATTN_XFORMERS", "enabled") == "enabled"
 except:
     XFORMERS_IS_AVAILBLE = False
     print("No module 'xformers'. Proceeding without it.")
