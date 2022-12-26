@@ -289,8 +289,11 @@ def make_attn(in_channels, attn_type="vanilla", attn_kwargs=None):
     elif attn_type == "vanilla-xformers":
         print(f"building MemoryEfficientAttnBlock with {in_channels} in_channels...")
         return MemoryEfficientAttnBlock(in_channels)
-    elif type == "memory-efficient-cross-attn":
-        attn_kwargs["query_dim"] = in_channels
+    elif attn_type == "memory-efficient-cross-attn":
+        if attn_kwargs is None:
+            attn_kwargs = {"query_dim": in_channels}
+        else:
+            attn_kwargs["query_dim"] = in_channels
         return MemoryEfficientCrossAttentionWrapper(**attn_kwargs)
     elif attn_type == "none":
         return nn.Identity(in_channels)
